@@ -12,48 +12,24 @@
     <style type="text/css">
         body {
             background: #403B4A;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #E7E9BB, #403B4A);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+            background: -webkit-linear-gradient(to right, #4D4545, #000000);
+            background: linear-gradient(to right,  #4D4545, #000000);
         }
 
         .login-form {
-            width: 340px;
-            margin: 50px auto;
+            width: 25%;
+            margin: 10% auto;        
         }
+        
 
-        .login-form form {
-            margin-bottom: 15px;
-            background: #f7f7f7;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-        }
-
-        .login-form h2 {
-            margin: 0 0 15px;
-        }
-
-        .form-control,
-        .btn {
-            min-height: 38px;
-            border-radius: 2px;
-        }
-
-        .btn {
-            font-size: 15px;
-            font-weight: bold;
-        }
+     
     </style>
 </head>
 
 <body>
     <div class="login-form">
         <form name="form1" method="post">
-            <h2 class="text-center">Log in</h2>
+            <h2 class="text-center" style="color:#FFF">Log in</h2>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Username" required>
             </div>
@@ -61,16 +37,19 @@
                 <input type="password" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                <button type="submit" class="btn btn-primary btn-block" >Log in</button>
 
                 <input type="button" class="btn btn-primary btn-block" value="Logar sem acesso"
-                    onclick="window.location='index.html';"> </div>
+                    onclick="window.location='index.html'" target="_blank"> </div>
+
+               
             <div class="clearfix">
-                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                <a href="#" class="pull-right">Forgot Password?</a>
+                <label class="pull-left checkbox-inline" style="color:#FFF"><input type="checkbox"> Remember me</label>
+                <a href="#" class="pull-right" style="color:#FFF" >Forgot Password?</a>
             </div>
         </form>
-        <p class="text-center"><a href="#">Create an Account</a></p>
+        <p class="text-center">
+            <a style="color:#FFF" href="#">Create an Account</a></p>
     </div>
 </body>
 

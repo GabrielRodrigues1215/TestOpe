@@ -20,14 +20,14 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
+  <link href="css/resume.css" rel="stylesheet">
 
 </head>
 <div id="app">
 
   <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-menu fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Menu</span>
         <span class="d-none d-lg-block">
@@ -60,14 +60,13 @@
       </div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" >
 
       <section class="resume-section p-3 p-lg-5 d-flex" id="CadCli">
         <div class="w-100">
           <h2 class="mb-5">Cadastro Cliente:
           </h2>
           <div class="subheading mb-5">
-            <p>Aqui ficaria tela de cadastro Cliente mais ou menos assim, isso é só um teste pra vcs verem</p>
           </div>
           <form>
             <div class="form-row">
@@ -82,12 +81,12 @@
             </div>
             <div class="form-group">
               <label for="inputAddress">Endereço</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+              <input type="text" class="form-control" id="inputAddress" placeholder="Digite seu Endereço">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="inputCity" placeholder="Digite sua Cidade">
               </div>
               <div class="form-group col-md-4">
                 <label for="inputEstado">Estado</label>
@@ -98,43 +97,26 @@
               </div>
               <div class="form-group col-md-2">
                 <label for="inputCEP">CEP</label>
-                <input type="text" class="form-control" id="inputCEP">
+                <input type="text" class="form-control" id="inputCEP" placeholder="Digite seu CEP">
               </div>
             </div>
             <hr>
-            <input type="checkbox" @click="adicionar"> adicionar carro
-            <span v-for="carro in carros">
-              <p> Modelo do carro: {{carro}}</p>
-            </span>
-
-            <span v-for= "placa in placas">
-              <p>Placa do carro: {{placa}}</p>
-            </span>
-
-            <span v-for= "xassi in chassis">
-                <p>Chassi do carro: {{xassi}}</p>
-              </span>
-
-              <span v-for= "corr in cores">
-                  <p>Cor do carro: {{corr}}</p>
-                </span>
-           
             
-            <input type="checkbox" v-model="car">adicionar formulario
+            <input type="checkbox" v-model="car">Adicionar carro dependente
+            <br>
+            <br>
             <p v-if="!car"></p>
-
             <footer v-show="car">
             <form name="form1" action="enviar.php" method="post">
-                Modelo do Carro:
-                <input name="nome" type="text"><br /><br />
-                Placa:
-                <input name="Placa" type="text"><br /><br />
-                Chassi:
-                <input name="Chassi" type="Chassi"><br /><br />
-                Cor:
-                <input name="Cor" type="Cor"><br /><br />
-                <input type="submit"  onclick=>
+               <label>Modelo do Carro: </label> 
+                <input name="nome" type="text">
+                <label>Placa: </label> 
+                <input name="Placa" type="text">
+                <label>Cor:</label>
+                <input name="Cor" type="Cor"><br />
+                
                 </form>
+              
               </footer>
             <br>
             <button type="submit"  class="btn btn-primary">Cadastrar</button>
