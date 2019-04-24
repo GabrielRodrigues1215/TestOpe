@@ -114,7 +114,6 @@
                 <input name="Placa" type="text">
                 <label>Cor:</label>
                 <input name="Cor" type="Cor"><br />
-                
                 </form>
               
               </footer>
@@ -205,44 +204,8 @@
     new Vue({
         el: '#app',
         data: {
-            carros: [],
-            placas: [],
-            chassis:[],
-            cores:[],
             car: false,
         },
-        methods: {
-            adicionar() {
-                
-                
-                let qualcarro = prompt("Digite qual modelo do carro:");
-                let placa = prompt("Digite qual é a placa do carro: ");
-                let chassi = prompt("Digite qual é o chassi: ");
-                let cor = prompt("Digite qual é a cor: ");
-                
-
-                if(qualcarro!==null){
-                  this.carros.push(qualcarro);
-                 
-                }
-                if(placa!==null){
-                  this.placas.push(placa);
-                }
-                if(chassi!==null){
-                  this.chassis.push(chassi);
-                }
-                if(cor!==null){
-                  this.cores.push(cor);
-                }
-               
-            },
-            adicionar2(){
-              
-
-
-
-            }
-        }
     })
 </script>
 </script>
