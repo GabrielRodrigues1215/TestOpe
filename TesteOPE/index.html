@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-br">
 <script src="https://unpkg.com/vue"></script>
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>teste OPE</title>
+  <title>Mechanical System</title>
+  <link rel="shortcut icon" href="img/logoICO.ico" type="image/x-icon" />
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Inici">inicial</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#CadCli">Cadastro Cliente</a>
           </li>
           <li class="nav-item">
@@ -61,6 +64,12 @@
     </nav>
 
     <div class="container-fluid p-0" >
+      <section class="resume-section p-3 p-lg-5 d-flex" id="Inici">
+          <div class="w-100">
+            <h2 class="mb-5">inicial:
+            </h2>
+            <img src="img/test.jpeg" alt="">
+      </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex" id="CadCli">
         <div class="w-100">
@@ -107,22 +116,22 @@
             <br>
             <p v-if="!car"></p>
             <footer v-show="car">
-            <form name="form1" action="enviar.php" method="post">
                <label>Modelo do Carro: </label> 
                 <input name="nome" type="text">
                 <label>Placa: </label> 
                 <input name="Placa" type="text">
                 <label>Cor:</label>
                 <input name="Cor" type="Cor"><br />
-                </form>
-              
               </footer>
             <br>
-            <button type="submit"  class="btn btn-primary">Cadastrar</button>
+            
+          </form>
+          <form>
+              <button type="submit"  class="btn btn-primary">Cadastrar</button>
           </form>
         </div>
       </section>
-
+  
       <hr class="m-0">
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="CadFun">
         <div class="w-100">
