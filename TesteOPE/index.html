@@ -62,15 +62,15 @@
         </ul>
       </div>
     </nav>
-
-    <div class="container-fluid p-0" >
+    
+    <div class="container-fluid p-0" id="html">
       <section class="resume-section p-3 p-lg-5 d-flex" id="Inici">
           <div class="w-100">
             <h2 class="mb-5">inicial:
             </h2>
-            <img src="img/test.jpeg" alt="">
+            
       </section>
-
+      
       <section class="resume-section p-3 p-lg-5 d-flex" id="CadCli">
         <div class="w-100">
           <h2 class="mb-5">Cadastro Cliente:
@@ -109,6 +109,7 @@
                 <input type="text" class="form-control" id="inputCEP" placeholder="Digite seu CEP">
               </div>
             </div>
+        
             <hr>
             
             <input type="checkbox" v-model="car">Adicionar carro dependente
@@ -212,8 +213,10 @@
 
     new Vue({
         el: '#app',
-        data: {
+        data() {
+          return {
             car: false,
+          }  
         },
     })
 </script>
