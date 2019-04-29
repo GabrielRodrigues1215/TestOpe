@@ -78,36 +78,39 @@
           </h2>
           <div class="subheading mb-5">
           </div>
-          <form>
+          <form action="config.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputNome">Nome Completo:</label>
-                <input type="Nome" class="form-control" id="inputNome" placeholder="Digite seu Nome">
+                <input type="text" class="form-control" placeholder="Digite seu Nome" name="inputNome">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputCpf">CPF:</label>
-                <input type="cpf" class="form-control" id="inputCpf" placeholder="Digite seu CPF">
+                <input type="cpf" class="form-control" id="inputCpf" placeholder="Digite seu CPF" name="inputCpf">
               </div>
             </div>
             <div class="form-group">
               <label for="inputAddress">Endereço</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Digite seu Endereço">
+              <input type="text" class="form-control" id="inputAddress" placeholder="Digite seu Endereço" name="inputAddress">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="Digite sua Cidade">
+                <input type="text" class="form-control" id="inputCity" placeholder="Digite sua Cidade" name="inputCity">
               </div>
               <div class="form-group col-md-4">
                 <label for="inputEstado">Estado</label>
                 <select id="inputEstado" class="form-control">
                   <option selected>Escolher...</option>
-                  <option>...</option>
+                  <option >SP</option>
+                  <option>RJ</option>
+                  <option>SC</option>
+                  <option>MG</option>
                 </select>
               </div>
               <div class="form-group col-md-2">
                 <label for="inputCEP">CEP</label>
-                <input type="text" class="form-control" id="inputCEP" placeholder="Digite seu CEP">
+                <input type="text" class="form-control" id="inputCEP" placeholder="Digite seu CEP" name="inputCEP">
               </div>
             </div>
         
@@ -119,18 +122,16 @@
             <p v-if="!car"></p>
             <footer v-show="car">
                <label>Modelo do Carro: </label> 
-                <input name="nome" type="text">
+                <input  type="text" name="ModCarro" id="ModCarro">
                 <label>Placa: </label> 
-                <input name="Placa" type="text">
+                <input  type="text" name="PlacaCarro" id="PlacaCarro">
                 <label>Cor:</label>
-                <input name="Cor" type="Cor"><br />
+                <input  type="text" name="CorCarro" id="CorCarro"><br />
               </footer>
             <br>
-            
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
           </form>
-          <form>
-              <button type="submit"  class="btn btn-primary">Cadastrar</button>
-          </form>
+         
         </div>
       </section>
   
@@ -145,8 +146,8 @@
           <form>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputNome">Nome Completo:</label>
-                <input type="Nome" class="form-control" id="inputNome" placeholder="Digite seu Nome">
+                <label>Nome Completo:</label>
+                <input type="text" class="form-control" id="" placeholder="Digite seu Nome">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputCpf">CPF:</label>
@@ -185,6 +186,11 @@
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Consulta">
         <div class="w-100">
           <h2 class="mb-5">Consulta</h2>
+          <form action="config.php" method="POST">
+              <label>nome:</label><input type="text" value="<?php echo $name?>" readonly />
+            <button type="submit">Consulta</button>
+          </form>
+
 
         </div>
       </section>
