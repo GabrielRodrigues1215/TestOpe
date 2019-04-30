@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -76,6 +78,12 @@
         <div class="w-100">
           <h2 class="mb-5">Cadastro Cliente:
           </h2>
+          <?php
+              if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+              }
+            ?>
           <div class="subheading mb-5">
           </div>
           <form action="config.php" method="POST">
@@ -186,11 +194,24 @@
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Consulta">
         <div class="w-100">
           <h2 class="mb-5">Consulta</h2>
-          <form action="config.php" method="POST">
-              <label>nome:</label><input type="text" value="<?php echo $name?>" readonly />
-            <button type="submit">Consulta</button>
-          </form>
 
+          
+            
+              <div class="row">
+                <div class="col" id='CadastroCliente'>
+          <input type="button" class="btn btn-primary btn-block"  value="Consulta Clientes"
+                  onclick="myFunction()">     
+                <div id='demo'>
+                </div>
+                </div>
+                <div class="col" id='CadastroFuncionario'>
+          <input type="button" class="btn btn-primary btn-block"  value="Consulta Funcionario"
+                  onclick="myFunction()">     
+                <div id='demo2'>
+                </div>
+                </div>
+
+              </div>
 
         </div>
       </section>
@@ -227,7 +248,14 @@
         },
     })
 </script>
+<script>
+  	function myFunction(){
+    var x = document.getElementById('demo').innerHTML ="<iframe src='listaCliente.php' height='600px'></iframe>"
+    var y = document.getElementById('demo2').innerHTML ="<iframe src='' ></iframe>"
+    
+    }
 </script>
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

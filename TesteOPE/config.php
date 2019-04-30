@@ -1,15 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "id9421485_adim";
-$password = "123456";
-$dbname = "id9421485_testbd";
+session_start();
+include_once("conexao.php");
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 $name = $_POST['inputNome'];
 $cpf = $_POST['inputCpf'];
 $endereco = $_POST['inputAddress'];
@@ -21,11 +13,14 @@ $CorCarro = $_POST['CorCarro'];
 
 $sql = "INSERT INTO Cad_CLiente(nome,cpf,endereco,cidade,cep,modeloCarro,PlacaCarro,CorCarro)
 VALUES ('$name','$cpf','$endereco','$cidade','$cep','$modeloCarro','$placaCarro','$CorCarro')";
-if ($conn->query($sql) === TRUE) {
-    header('Location: https://testope.000webhostapp.com/menu.html'); 
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
 
-$conn->close();
+$resultado_usuario = mysqli_query($conn,$sql);
+
+if(mysqli_insert_id($conn)){
+    $_SESSION['msg'] = "<p style='color:green;'>Usuario cadastrado com sucesso</p>";
+    header("Location: https://testope.000webhostapp.com/menu.php");
+}else{
+    $_SESSION['msg'] = "<p style='color:red;'>Usuario não foi cadastrado com sucesso</p>";
+    header("Location: https://testope.000webhostapp.com/menu.php");
+}
 ?>
