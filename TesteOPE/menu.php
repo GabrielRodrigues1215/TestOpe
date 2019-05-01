@@ -142,45 +142,46 @@ session_start();
          
         </div>
       </section>
-  
+              
       <hr class="m-0">
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="CadFun">
         <div class="w-100">
           <h2 class="mb-5">Cadastro Funcionario:
           </h2>
-          <div class="subheading mb-5">
-            <p>Aqui ficaria tela de cadastro Funcionario mais ou menos assim, isso é só um teste pra vcs verem</p>
-          </div>
-          <form>
+          <?php
+              if(isset($_SESSION['msg2'])){
+                echo $_SESSION['msg2'];
+                unset($_SESSION['msg2']);
+              }
+            ?>
+
+          <form action="config2.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label>Nome Completo:</label>
-                <input type="text" class="form-control" id="" placeholder="Digite seu Nome">
+                <input type="text" class="form-control"  placeholder="Digite seu Nome" name="inputNomefun">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputCpf">CPF:</label>
-                <input type="cpf" class="form-control" id="inputCpf" placeholder="Digite seu CPF">
+                <input type="cpf" class="form-control"  placeholder="Digite seu CPF" name="inputCpffun">
               </div>
             </div>
             <div class="form-group">
               <label for="inputAddress">Endereço</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+              <input type="text" class="form-control" placeholder="Digite o endereço" name="inputAddressfun">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control"  name="inputCityfun">
               </div>
-              <div class="form-group col-md-4">
-                <label for="inputEstado">Estado</label>
-                <select id="inputEstado" class="form-control">
-                  <option selected>Escolher...</option>
-                  <option>sp</option>
-                </select>
+              <div class="form-group col-md-2">
+                <label for="Telefone">Telefone</label>
+                <input type="text" class="form-control"  name="inputTelefonefun">
               </div>
               <div class="form-group col-md-2">
                 <label for="inputCEP">CEP</label>
-                <input type="text" class="form-control" id="inputCEP">
+                <input type="text" class="form-control"  name="inputCEPfun">
               </div>
             </div>
 
@@ -206,7 +207,7 @@ session_start();
                 </div>
                 <div class="col" id='CadastroFuncionario'>
           <input type="button" class="btn btn-primary btn-block"  value="Consulta Funcionario"
-                  onclick="myFunction()">     
+                  onclick="myFunction2()">     
                 <div id='demo2'>
                 </div>
                 </div>
@@ -250,9 +251,10 @@ session_start();
 </script>
 <script>
   	function myFunction(){
-    var x = document.getElementById('demo').innerHTML ="<iframe src='listaCliente.php' height='600px'></iframe>"
-    var y = document.getElementById('demo2').innerHTML ="<iframe src='' ></iframe>"
-    
+    var x = document.getElementById('demo').innerHTML ="<iframe src='listaCliente.php' width='510px' height='600px'></iframe>"
+    }
+    function myFunction2(){
+      var y = document.getElementById('demo2').innerHTML ="<iframe src='listaFuncionario.php' width='510px' height='600px' ></iframe>"
     }
 </script>
 
