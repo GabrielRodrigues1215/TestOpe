@@ -27,9 +27,9 @@ $row_usuario = $resultado_usuario -> fetch_assoc();
 	<body>
 		<h3>Editar Funcionario</h3>
 		<?php
-		if(isset($_SESSION['msg'])){
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
+		if(isset($_SESSION['msg2'])){
+			echo $_SESSION['msg2'];
+			unset($_SESSION['msg2']);
 		}
 		?>
 		<form action="proc_edit_funcionario.php" method="POST">

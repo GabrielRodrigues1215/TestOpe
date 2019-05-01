@@ -10,10 +10,39 @@ include_once("conexao.php");
 	</head>
 	<body>
 		<h1>Listar Funcionario</h1>
+				<!-- PESQUISAR DENTRO DO IFRAME -->
+				<form method="POST" action="">
+			<label>Nome: </label>
+			<input type="text" name="nome" placeholder="Digite o nome"><br><br>
+			
+			<input name="SendPesqUser" type="submit" value="Pesquisar">
+		</form><br><br>
 		<?php
-		if(isset($_SESSION['msg'])){
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
+		$SendPesqUser = filter_input(INPUT_POST, 'SendPesqUser', FILTER_SANITIZE_STRING);
+		if($SendPesqUser){
+			$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+			$result_usuario = "SELECT * FROM Cad_FUncionario WHERE nome LIKE '%$nome%'";
+			$resultado_usuario = mysqli_query($conn, $result_usuario);
+			while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
+				echo "ID: " . $row_usuario['id'] . "<br>";
+				echo "Nome: " . $row_usuario['nome'] . "<br>";
+				echo "Cpf: " . $row_usuario['cpf'] . "<br>";
+				echo "Endereço: " . $row_usuario['endereco'] . "<br>";
+				echo "Cidade: " . $row_usuario['cidade'] . "<br>";
+				echo "Telefone:" . $row_usuario['telefone'] . "<br>";
+				echo "Cep: " . $row_usuario['cep'] . "<br> <hr>";
+				
+				echo "<a href='editaFuncionario.php?id=" . $row_usuario['id'] . "'>Editar </a><br> <hr>";
+				echo "<a href='proc_apaga_funcionario.php?id=" . $row_usuario['id'] . "'>Apagar </a><br> <hr>";
+			}
+		}
+		?>
+		<!-- FINALIZAR PESQUISAR IFRAME -->
+
+		<?php
+		if(isset($_SESSION['msg2'])){
+			echo $_SESSION['msg2'];
+			unset($_SESSION['msg2']);
 		}
 		//paginação 
 		//receber o numero da pagina
