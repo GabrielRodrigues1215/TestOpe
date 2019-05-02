@@ -128,7 +128,9 @@ session_start();
             <br>
             <br>
             <p v-if="!car"></p>
+
             <footer v-show="car">
+            
                <label>Modelo do Carro: </label> 
                 <input  type="text" name="ModCarro" id="ModCarro">
                 <label>Placa: </label> 

@@ -2,6 +2,16 @@
 session_start();
 include_once("conexao.php");
 ?>
+ <!-- Bootstrap core CSS -->
+ <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/resume.css" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -9,13 +19,15 @@ include_once("conexao.php");
 		<title>CRUD - Listar</title>		
 	</head>
 	<body>
-		<h1>Listar Usuário</h1>
+	<div class="mx-auto " style="width:400px">
+
+		<h3>Listar Usuário</h3>
 		<!-- PESQUISAR DENTRO DO IFRAME -->
 		<form method="POST" action="">
 			<label>Nome: </label>
 			<input type="text" name="nome" placeholder="Digite o nome"><br><br>
 			
-			<input name="SendPesqUser" type="submit" value="Pesquisar">
+			<input name="SendPesqUser" type="submit" class="btn btn-primary" value="Pesquisar">
 		</form><br><br>
 		<?php
 		$SendPesqUser = filter_input(INPUT_POST, 'SendPesqUser', FILTER_SANITIZE_STRING);
@@ -107,5 +119,6 @@ include_once("conexao.php");
 		echo "<a href='listaCliente.php?pagina=$quantidade_pg'>Ultima </a>";
 
 		?>
+		</div>
 	</body>
 </html>

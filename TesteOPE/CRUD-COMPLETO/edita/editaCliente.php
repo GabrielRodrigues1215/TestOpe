@@ -25,6 +25,7 @@ $row_usuario = $resultado_usuario -> fetch_assoc();
 		<title>CRUD - Editar</title>		
 	</head>
 	<body>
+  <div class="mx-auto " style="width:400px">
 		<h3>Editar Usuário</h3>
 		<?php
 		if(isset($_SESSION['msg'])){
@@ -105,5 +106,6 @@ $row_usuario = $resultado_usuario -> fetch_assoc();
             <br>
             <button type="submit" class="btn btn-primary">Editar</button>
           </form>
+          </div>
 	</body>
 </html>
