@@ -247,6 +247,7 @@ session_start();
 
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Relatorio">
         <div class="w-100">
+        <h2 class="mb-5">Relatório</h2>
         <div class="row" style="margin-bottom: 10px">
     <div class="col-md-4">
       <label>Cliente:</label>
