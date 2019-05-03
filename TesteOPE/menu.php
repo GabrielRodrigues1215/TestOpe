@@ -270,7 +270,14 @@ session_start();
                 <button>-</button>
                 <input type="text" class="campo1" style="width:50px"/>
 
+<<<<<<< HEAD
                 <input type="text" class="campo1" style="width:50px" />              
+=======
+                <input type="text" class="campo1" style="width:50px" />
+               
+               
+          
+>>>>>>> 2806e66c34323d5f5e9a1a32c0ff8c8c617ac57d
               </div>
             </div>
             <hr>
