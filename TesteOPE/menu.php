@@ -71,6 +71,30 @@ session_start();
           <div class="w-100">
             <h2 class="mb-5">inicial:
             </h2>
+            <div class="row">
+              <div class="col"><p>primeira coluna</p></div>
+              
+              <div class="col">
+                <table>
+                  <tr>
+                   <td><img class="" src="http://www.cbcar.net.br/wp-content/uploads/2017/06/car-with-wrench-45x45.png" 
+                   width="45" 
+                   height="45" 
+                   title="car-with-wrench"></td>
+
+                   <td>
+                   <div class="row">
+                   
+                   <div class="col"> <span style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp; MECANICA GERAL EM BARUERI</span>  </div>
+                   </div>
+                   
+                   </td> 
+                 </tr>
+ 
+                </table>
+              </div>
+            </div>
+
             
       </section>
       
@@ -224,7 +248,7 @@ session_start();
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Relatorio">
         <div class="w-100">
           <h2 class="mb-5">Relatorio</h2>
-
+              <button>Gerar Relatório</button>
         </div>
       </section>
 
@@ -234,6 +258,41 @@ session_start();
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Orcamento">
         <div class="w-100">
           <h2 class="mb-5">Orçamento </h2>
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Descrição da peça:</label>
+                <input type="text" class="form-control"  placeholder="Digite os dados da peça" name="DescricaoPeca">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Quant.ValorUnit(R$)</label><br>
+                <button>+</button>
+                <input type="text" class="campo1" style="width:50px" />
+                <button>-</button>
+                <input type="text" class="campo1" style="width:50px"/>
+
+                <input type="text" class="campo1" style="width:50px" />              
+              </div>
+            </div>
+            <hr>
+            <br>
+            <br>
+            <button>+</button>
+            <button>-</button>
+              <div style="float: right">
+              <label>Quant</label>
+                <input type="text" class="campo1" style="width:50px" />
+              <label>R$</label> 
+                <input type="text" class="campo1" style="width:50px"/>
+            </div>
+            <hr>
+
+            <label>Quant.ValorUnit(R$)</label><br>
+               
+            <button type="submit" style="float: right" >Cancelar</button> 
+            <button type="submit" style="float: right" >Salvar</button>
+          </form>
+
+      </section>
 
         </div>
       </section>
