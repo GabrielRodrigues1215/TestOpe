@@ -85,7 +85,7 @@ session_start();
                    <td>
                    <div class="row">
                    
-                   <div class="col"> <span style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp; MECANICA GERAL EM BARUERI</span>  </div>
+                   <div class="col"> <span style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;MECANICA GERAL EM BARUERI</span>  </div>
                    </div>
                    
                    </td> 
